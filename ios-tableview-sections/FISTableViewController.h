@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "FISStudent.h"
 
 @interface FISTableViewController : UITableViewController
+
+@property (strong, nonatomic) NSArray *students;
+
 
 @end
