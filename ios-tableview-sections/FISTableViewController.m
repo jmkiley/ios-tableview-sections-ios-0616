@@ -46,7 +46,8 @@
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:@"expandingCell" forIndexPath:indexPath];
-    
+    FISStudent *studentForSection = self.students[(NSInteger) indexPath.section ];
+    cell.textLabel.text = [NSString stringWithFormat:@"%@", studentForSection.favoriteThings[indexPath.row]];
     // Configure the cell...
     
     return cell;
@@ -58,7 +59,7 @@
 }
 
 - (NSInteger)tableView:(UITableView *)tableView indentationLevelForRowAtIndexPath:(NSIndexPath *)indexPath {
-    return 1;
+    return 2;
 }
 /*
 // Override to support conditional editing of the table view.
